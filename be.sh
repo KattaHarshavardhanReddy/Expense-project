@@ -52,10 +52,10 @@ else
     echo -e "expense user already exists ... $Y SKIPPING $N"
 fi
 
-useradd expense &>>$LOG_FILE_NAME
-VALIDATE $? "added user expenses"
+#useradd expense &>>$LOG_FILE_NAME
+#VALIDATE $? "added user expenses"
 
-mkdir /app &>>$LOG_FILE_NAME
+mkdir -p /app &>>$LOG_FILE_NAME
 VALIDATE $? "created app flder"
 
 curl -o /tmp/backend.zip https://expense-builds.s3.us-east-1.amazonaws.com/expense-backend-v2.zip &>>$LOG_FILE_NAME
