@@ -56,7 +56,7 @@ VALIDATE $? "move html folder"
 unzip /tmp/frontend.zip &>>$LOG_FILE_NAME
 VALIDATE $? "unziping fe"
 
-cp /home/ec2-user/expense-project/expense.conf /etc/nginx/default.d/expense.conf
+cp /home/ec2-user/Expense-project/expense.conf /etc/nginx/default.d/expense.conf
 VALIDATE $? "Copied expense config"
 
 
