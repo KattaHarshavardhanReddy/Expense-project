@@ -54,10 +54,10 @@ VALIDATE $? "downloading be"
 
 cd /app
 
-unzip /tmp/backend.zip
+unzip /tmp/backend.zip &>>$LOG_FILE_NAME
 VALIDATE $? "unzip be file"
 
-npm install
+npm install &>>$LOG_FILE_NAME
 VALIDATE $? "installing dependencies"
 
 cp /home/ec2-user/Expense-project/be.service /etc/systemd/system/backend.service
